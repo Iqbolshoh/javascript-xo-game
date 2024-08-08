@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/favicon.ico">
+    <title>X va O O'yini</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            flex-direction: column;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(80px, 1fr));
+            grid-template-rows: repeat(3, minmax(80px, 1fr));
+            gap: 5px;
+            max-width: 300px;
+        }
+
+        .cell {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .cell:hover {
+            background-color: #eee;
+            transform: scale(1.1);
+        }
+
+        #game-board {
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        #game-over-message {
+            font-size: 18px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        #restart-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        #restart-button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 600px) {
+            .board {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game-board" class="board"></div>
+    <div id="game-over-message"></div>
+    <button id="restart-button" onclick="restartGame()">Qayta o'ynash</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const board = document.getElementById("game-board");
+            const gameOverMessage = document.getElementById("game-over-message");
+            const restartButton = document.getElementById("restart-button");
+            let currentPlayer = "X";
+            let gameOver = false;
+
+            function createCell() {
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                cell.addEventListener("click", handleCellClick);
+                return cell;
+            }
+
+            function handleCellClick(event) {
+                if (gameOver || event.target.textContent !== "") {
+                    return;
+                }
+
+                event.target.textContent = currentPlayer;
+                if (checkWinner()) {
+                    gameOverMessage.textContent = `${currentPlayer} g'alaba qozondi!`;
+                    gameOverMessage.style.display = "block";
+                    gameOver = true;
+                    animateWinner();
+                    restartButton.style.display = "block";
+                    return;
+                } else {
+                    currentPlayer = currentPlayer === "X" ? "O" : "X";
+                }
+
+                if (checkDraw()) {
+                    gameOverMessage.textContent = "Durrang! Natija teng!";
+                    gameOverMessage.style.display = "block";
+                    gameOver = true;
+                    restartButton.style.display = "block";
+                }
+            }
+
+
+            function checkWinner() {
+                const cells = document.querySelectorAll(".cell");
+
+                const winCombinations = [
+                    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                    [0, 4, 8], [2, 4, 6]
+                ];
+
+                for (const combo of winCombinations) {
+                    const [a, b, c] = combo;
+                    if (cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[b].textContent === cells[c].textContent) {
+                        highlightWinner(cells[a], cells[b], cells[c]);
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            function highlightWinner(cellA, cellB, cellC) {
+                cellA.style.backgroundColor = "#8bc34a";
+                cellB.style.backgroundColor = "#8bc34a";
+                cellC.style.backgroundColor = "#8bc34a";
+            }
+
+            function animateWinner() {
+                const winningCells = document.querySelectorAll(".cell[style='background-color: #8bc34a;']");
+
+                winningCells.forEach(cell => {
+                    cell.style.transition = "transform 0.5s ease-in-out";
+                    cell.style.transform = "scale(1.2)";
+                });
+            }
+
+            function checkDraw() {
+                const cells = document.querySelectorAll(".cell");
+                for (const cell of cells) {
+                    if (cell.textContent === "") {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            restartButton.addEventListener("click", function () {
+                location.reload();
+            });
+            for (let i = 0; i < 9; i++) {
+                board.appendChild(createCell());
+            }
+        });
+    </script>
+</body>
+
+</html>
