@@ -12,6 +12,16 @@ This is a simple Tic-Tac-Toe (XO) game implemented using HTML, CSS, and JavaScri
 - **Draw Detection:** If the game ends in a draw, a message is displayed.
 - **Play Again:** A restart button is provided to reset the game and play again.
 
+## Screenshots
+
+### Desktop
+
+![XO Game Screenshot](./images/desktop.png)
+
+### Mobile
+
+![XO Game Screenshot](./images/mobile.png)
+
 ## Files
 
 - **index.html:** The main HTML file containing the structure of the game.
@@ -41,16 +51,6 @@ To set up and run the XO Game on your local machine:
    ```
 3. **Open the `index.html` File:**
    You can open the `index.html` file in any modern web browser to start playing the game. Simply double-click the file or open it using your browser's "Open File" option.
-
-## Screenshots
-
-### Desktop
-
-![XO Game Screenshot](./images/desktop.png)
-
-### Mobile
-
-![XO Game Screenshot](./images/mobile.png)
 
 ## Project Structure
 
