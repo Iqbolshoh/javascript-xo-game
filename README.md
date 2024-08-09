@@ -42,6 +42,16 @@ To set up and run the XO Game on your local machine:
 3. **Open the `index.html` File:**
    You can open the `index.html` file in any modern web browser to start playing the game. Simply double-click the file or open it using your browser's "Open File" option.
 
+## Screenshots
+
+### Desktop
+
+![XO Game Screenshot](./images/desktop.png)
+
+### Mobile
+
+![XO Game Screenshot](./images/mobile.png)
+
 ## Project Structure
 
 - **index.html**: Contains the basic structure of the game and includes the linked CSS and JavaScript files.
