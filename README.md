@@ -68,10 +68,6 @@ To set up and run the XO Game on your local machine:
         alt="JavaScript">
 </div>
 
-## Author
-
-- **Iqbolshoh Ilhomjonov** - [GitHub Profile](https://github.com/Iqbolshoh)
-
 ## Connect with Me
 
 I love connecting with new people and exploring new opportunities. Feel free to reach out to me through any of the platforms below:
