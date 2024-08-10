@@ -58,6 +58,16 @@ To set up and run the XO Game on your local machine:
 - **style.css**: Styles the game board, cells, and buttons, providing a responsive layout and hover effects.
 - **script.js**: Handles the game logic, including player turns, win detection, and game reset functionality.
 
+## Technologies
+
+<div style="display: flex; flex-wrap: wrap; gap: 5px;">
+    <img src="https://img.shields.io/badge/HTML-%23F06529.svg?style=for-the-badge&logo=html5&logoColor=white"
+        alt="HTML">
+    <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+    <img src="https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+        alt="JavaScript">
+</div>
+
 ## Author
 
 - **Iqbolshoh Ilhomjonov** - [GitHub Profile](https://github.com/Iqbolshoh)
