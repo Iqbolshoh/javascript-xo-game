@@ -1,4 +1,4 @@
-# XO Game
+# Tic-Tac-Toe (XO) game
 
 ![XO Game Banner](./images/banner.png)
 
