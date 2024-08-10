@@ -1,8 +1,17 @@
 # Tic-Tac-Toe (XO) game
 
-![XO Game Banner](./images/banner.png)
-
 This is a simple Tic-Tac-Toe (XO) game implemented using HTML, CSS, and JavaScript. The game allows two players to play against each other on a 3x3 grid.
+
+## Preview
+
+### Desktop
+
+![Desktop Preview](./images/desktop.png)
+
+### Mobile
+
+![Mobile Preview](./images/mobile.png)
+
 
 ## Features
 
@@ -11,16 +20,6 @@ This is a simple Tic-Tac-Toe (XO) game implemented using HTML, CSS, and JavaScri
 - **Winner Highlight:** The winning combination of cells is highlighted with a green color.
 - **Draw Detection:** If the game ends in a draw, a message is displayed.
 - **Play Again:** A restart button is provided to reset the game and play again.
-
-## Screenshots
-
-### Desktop
-
-![XO Game Screenshot](./images/desktop.png)
-
-### Mobile
-
-![XO Game Screenshot](./images/mobile.png)
 
 ## Files
 
