@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const board = document.getElementById("game-board");
     const gameOverMessage = document.getElementById("game-over-message");
     const restartButton = document.getElementById("restart-button");
-    let currentPlayer = "X";
+    let currentPlayer = "X";  // Boshlanishi uchun foydalanuvchi "X" o'ynaydi
     let gameOver = false;
 
     function createCell() {
@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleCellClick(event) {
-        if (gameOver || event.target.textContent !== "") {
+        if (gameOver || event.target.textContent !== "" || currentPlayer !== "X") {
             return;
         }
 
+        // Foydalanuvchi o'z harakatini qiladi
         event.target.textContent = currentPlayer;
+
         if (checkWinner()) {
             gameOverMessage.textContent = `${currentPlayer} wins!`;
             gameOverMessage.style.display = "block";
@@ -26,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             restartButton.style.display = "block";
             return;
         } else {
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
+            currentPlayer = "O";  // Kompyuterning navbati
         }
 
         if (checkDraw()) {
@@ -34,6 +36,41 @@ document.addEventListener("DOMContentLoaded", function () {
             gameOverMessage.style.display = "block";
             gameOver = true;
             restartButton.style.display = "block";
+        } else if (!gameOver) {
+            setTimeout(computerMove, 500);  // Kompyuterga biroz vaqt berish
+        }
+    }
+
+    function computerMove() {
+        const cells = document.querySelectorAll(".cell");
+        let availableCells = [];
+
+        cells.forEach((cell, index) => {
+            if (cell.textContent === "") {
+                availableCells.push(cell);
+            }
+        });
+
+        if (availableCells.length > 0) {
+            const randomCell = availableCells[Math.floor(Math.random() * availableCells.length)];
+            randomCell.textContent = "O";  // Kompyuterning harakati
+
+            if (checkWinner()) {
+                gameOverMessage.textContent = "O wins!";
+                gameOverMessage.style.display = "block";
+                gameOver = true;
+                animateWinner();
+                restartButton.style.display = "block";
+            } else {
+                currentPlayer = "X";  // Foydalanuvchiga navbat
+            }
+
+            if (checkDraw() && !gameOver) {
+                gameOverMessage.textContent = "It's a draw!";
+                gameOverMessage.style.display = "block";
+                gameOver = true;
+                restartButton.style.display = "block";
+            }
         }
     }
 
@@ -85,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     restartButton.addEventListener("click", function () {
         location.reload();
     });
+
     for (let i = 0; i < 9; i++) {
         board.appendChild(createCell());
     }
