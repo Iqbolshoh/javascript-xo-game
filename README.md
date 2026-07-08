@@ -1,37 +1,62 @@
 # 🎮 JavaScript XO Game
 
-This is a **Tic-Tac-Toe (XO) game** implemented using **HTML, CSS, and JavaScript**. The game allows **two players** to compete on a **3x3 grid**.  
+**JavaScript XO Game** is a **Tic-Tac-Toe** game built with vanilla **HTML, CSS, and JavaScript**. You play as **X** against a **computer opponent (O)** on a 3x3 grid — the computer blocks your winning moves, takes its own winning moves when available, and otherwise plays the center or a random open cell.
 
-## 👀 Preview
+<p align="left">
+  <img src="https://img.shields.io/badge/JavaScript-%23F7DF1C.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
+</p>
 
-### 💻 **Desktop**
+## 📚 Table of Contents
+
+- [Features](#-features)
+- [Screenshots](#-screenshots)
+- [Installation](#️-installation)
+- [Project Structure](#-project-structure)
+- [Technologies Used](#-technologies-used)
+- [License](#-license)
+- [Contributing](#-contributing)
+- [Connect with Me](#-connect-with-me)
+
+## 🚀 Features
+
+- ✅ **Responsive Design** – The game board adapts to all screen sizes.
+- 🎮 **Player vs Computer** – You play **X**, the computer plays **O** with basic blocking/winning logic.
+- 🏆 **Winner Highlight** – The winning combination is highlighted in green with a scale animation.
+- 🤝 **Draw Detection** – Displays a message when the board fills up with no winner.
+- 🔄 **Play Again Button** – Appears at game end to instantly reset the board.
+
+## 👀 Screenshots
+
+**Desktop**
 ![Desktop Preview](./src/images/desktop.png)
 
-### 📱 **Mobile**
+**Mobile**
 ![Mobile Preview](./src/images/mobile.png)
 
-## 🚀 Features 
+## 🛠️ Installation
 
-- ✅ **Responsive Design:** The game adapts to **all screen sizes**.
-- 🎮 **Interactive Game Board:** Players can **place X or O** by clicking on cells.
-- 🏆 **Winner Highlight:** The **winning combination** is highlighted in **green**.
-- 🤝 **Draw Detection:** If the game ends in a draw, a **message is displayed**.
-- 🔄 **Play Again Button:** A **restart button** allows players to reset the game and play again.
-
-## 🛠️ Installation  
-
-To set up and run the XO Game on your local machine:  
-
-### 1️⃣ **Clone the Repository**  
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/Iqbolshoh/javascript-xo-game.git
-```
-### 2️⃣ **Navigate to the Project Directory**  
-```bash
 cd javascript-xo-game
 ```
-### 3️⃣ **Open the `index.html` File**  
-Simply open the `index.html` file in any modern **web browser** to start playing.  
+
+### 2️⃣ Open `index.html`
+Simply open the `index.html` file in any modern web browser to start playing — no build step or server required.
+
+## 📂 Project Structure
+
+```
+javascript-xo-game/
+├── index.html               # Game markup
+├── src/
+│   ├── css/style.css        # Board styling and animations
+│   ├── js/script.js         # Game logic + simple computer opponent
+│   └── images/              # Preview screenshots
+├── LICENSE
+└── README.md
+```
 
 ## 🖥 Technologies Used
 ![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -39,71 +64,24 @@ Simply open the `index.html` file in any modern **web browser** to start playing
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1C.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
 ## 📜 License
-This project is open-source and available under the **MIT License**.
+This project is open-source and available under the [MIT License](./LICENSE).
 
-## 🤝 Contributing  
+## 🤝 Contributing
 🎯 Contributions are welcome! If you have suggestions or want to enhance the project, feel free to fork the repository and submit a pull request.
 
-## 📬 Connect with Me  
-💬 I love meeting new people and discussing tech, business, and creative ideas. Let’s connect! You can reach me on these platforms:
+## 📬 Connect with Me
+💬 I love meeting new people and discussing tech, business, and creative ideas. Let's connect! You can reach me on these platforms:
 
 <div align="center">
-  <table>
-    <tr>
-      <td>
-        <a href="https://iqbolshoh.uz" target="_blank">
-          <img src="https://img.icons8.com/color/48/domain.png" 
-               height="40" width="40" alt="Website" title="Website" />
-        </a>
-      </td>
-      <td>
-        <a href="mailto:iilhomjonov777@gmail.com" target="_blank">
-          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/gmail.svg"
-               height="40" width="40" alt="Email" title="Email" />
-        </a>
-      </td>
-      <td>
-        <a href="https://github.com/iqbolshoh" target="_blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg"
-               height="40" width="40" alt="GitHub" title="GitHub" />
-        </a>
-      </td>
-      <td>
-        <a href="https://www.linkedin.com/in/iqbolshoh/" target="_blank">
-          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/linkedin.svg"
-               height="40" width="40" alt="LinkedIn" title="LinkedIn" />
-        </a>
-      </td>
-      <td>
-        <a href="https://t.me/iqbolshoh_777" target="_blank">
-          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/telegram.svg"
-               height="40" width="40" alt="Telegram" title="Telegram" />
-        </a>
-      </td>
-      <td>
-        <a href="https://wa.me/998997799333" target="_blank">
-          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/whatsapp.svg"
-               height="40" width="40" alt="WhatsApp" title="WhatsApp" />
-        </a>
-      </td>
-      <td>
-        <a href="https://instagram.com/iqbolshoh_777" target="_blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg"
-               height="40" width="40" alt="Instagram" title="Instagram" />
-        </a>
-      </td>
-      <td>
-        <a href="https://x.com/iqbolshoh_777" target="_blank">
-          <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"
-               height="40" width="40" alt="X" title="X (Twitter)" />
-        </a>
-      </td>
-      <td>
-        <a href="https://www.youtube.com/@Iqbolshoh_777" target="_blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg"
-               height="40" width="40" alt="YouTube" title="YouTube" />
-        </a>
-      </td>
-    </tr>
-  </table>
+
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://iqbolshoh.uz)
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:iilhomjonov777@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iqbolshoh)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/iqbolshoh/)
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/iqbolshoh_777)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/998997799333)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/iqbolshoh_777)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/iqbolshoh_777)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Iqbolshoh_777)
+
 </div>
